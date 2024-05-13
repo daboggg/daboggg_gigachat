@@ -9,6 +9,7 @@ from bot.comands import set_commands
 from bot.core import bot
 from bot.dialogs import main_dialog
 from bot.handlers.cmd import cmd_router
+from bot.handlers.other import other_router
 from settings import settings
 
 
@@ -45,6 +46,7 @@ async def start():
     dp.include_routers(
         cmd_router,
         main_dialog,
+        other_router,
     )
 
     # подключение диалогов
